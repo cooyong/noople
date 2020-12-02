@@ -33,6 +33,19 @@ Run the application:
 
 Visit http://localhost:5000 in a web browser.
 
+## Static Analysis
+
+There are a number of static analysis tools included in the tox config:
+
+* unittest (unit tests)
+* safety (Software Composition Analysis or SCA)
+* bandit (Static Application Security Testing or SAST)
+* pylint (linter)
+
+Note that there are no unit tests, so unittest passes! Also note that bandit passes, even though we know there are XSS and SQL injection vulnerabilities (see below).
+
+The linter, on the other hand, fails!
+
 ## (Known) Vulnerabilities
 
 ### Reflected XSS
